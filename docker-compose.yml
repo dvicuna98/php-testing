@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/html
+    container_name: php-container
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "${APP_PORT}:8080"
+    networks:
+      - php-container-net
+
+networks:
+  php-container-net:
+    external:
+      name: ctdesarrollo-with-vpn
+
+# add the custom network for vpn compatibility sudo docker network create ctdesarrollo-with-vpn --subnet 10.0.1.0/24
