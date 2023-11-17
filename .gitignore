@@ -2,3 +2,6 @@ vendor
 .idea
 credentials.json
 token.json
+*.docx
+*.xlsx
+TemplatesDocx

@@ -9,8 +9,8 @@ $PHPWord = new PhpWord();
 
 
 try {
-    if(file_exists('TemplatesDocx/TestTemplate.docx')){
-        $document = new TemplateProcessor('TemplatesDocx/TestTemplate.docx');
+    if(file_exists('TemplatesDocx/test_template.docx')){
+        $document = new TemplateProcessor('TemplatesDocx/test_template.docx');
         $document->setValue('FORM_CODE', 'Example code here');
         $document->setValue('ACADEMIC_PERIOD', 'Example academic period');
 
